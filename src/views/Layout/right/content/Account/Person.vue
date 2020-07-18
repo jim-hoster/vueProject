@@ -45,7 +45,7 @@
 
       <el-form>
         <el-form-item>
-          <el-input placeholder="请输入您的身份证"></el-input>
+          <el-input placeholder="请输入您的圣诞节分手的分手就分手的方式打开福克斯的身份证"></el-input>
         </el-form-item>
       </el-form>
     </Panel>
