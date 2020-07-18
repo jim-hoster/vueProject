@@ -45,7 +45,7 @@
 
       <el-form>
         <el-form-item>
-          <el-input placeholder="请输入您的身份证"></el-input>
+          <el-input placeholder="请输入您的都会发生发射点就是考生的分数身份证"></el-input>
         </el-form-item>
       </el-form>
     </Panel>
