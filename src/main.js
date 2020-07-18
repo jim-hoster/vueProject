@@ -8,10 +8,15 @@ import 'element-ui/lib/theme-chalk/index.css'
 import echarts from 'echarts'
 // 引入iconfont字体库
 import './assets/font/iconfont.css'
+// 引入时间处理函数
+import moment from 'moment'
 // 初始化样式
 import './assets/css/reset.min.css'
 import './assets/css/common.less'
-Vue.prototype.$echarts = echarts //定义为全局变量
+// 创建一个vue的bus实例中介
+Vue.prototype.$bus = new Vue();
+
+Vue.prototype.$moment = moment
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 new Vue({
