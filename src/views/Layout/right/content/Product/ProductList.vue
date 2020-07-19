@@ -115,7 +115,8 @@
 // 面板组件引入
 import Panel from "@/components/Panel/Panel.vue";
 import { getProductList, delProduct } from "@/api/product";
-import moment from "moment";
+// 时间处理库引入
+let day = require("dayjs");
 export default {
   data() {
     return {
@@ -143,7 +144,7 @@ export default {
 
       // 处理ctime时间格式
       data.forEach(v => {
-        v.ctime = moment(v.ctime).format("YYYY-MM-DD HH:mm:ss");
+        v.ctime = day(v.ctime).format("YYYY-MM-DD HH:mm:ss");
       });
       // 边界判断 如果当前页码没有数据了 且 当前页码不是第一页
       if (!data.length && this.currentPage !== 1) {

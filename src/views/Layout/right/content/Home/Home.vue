@@ -90,6 +90,11 @@ export default {
       }
     ];
   },
+  filters: {
+    filter(val) {
+      return val.substr(0, 3) + "******" + val.substr(-4);
+    }
+  },
 
   // 组件注册位置
   components: {

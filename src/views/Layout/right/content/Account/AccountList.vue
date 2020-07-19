@@ -89,7 +89,8 @@ import {
 } from "@/api/account";
 
 // 引入时间处理函数
-import day from "day";
+
+let day = require("dayjs");
 export default {
   data() {
     return {

@@ -80,8 +80,8 @@ import Panel from "@/components/Panel/Panel.vue";
 import { getOrderList, editOrder, OrderDetail } from "@/api/order";
 //本地存储
 import local from "@/utils/local";
-// 引入moment时间处理函数
-import moment from "moment";
+// 引入dayjs时间处理库
+let day = require("dayjs");
 export default {
   data() {
     return {
@@ -128,8 +128,8 @@ export default {
       // 数据发送完毕
       // 接收数据，对前端相对应的数据进行字段处理
       data.forEach(v => {
-        v.orderTime = moment(v.orderTime).format("YYYY年MM月DD日");
-        v.deliveryTime = moment(v.deliveryTime).format("YYYY-MM-DD HH:mm:ss");
+        v.orderTime = day(v.orderTime).format("YYYY年MM月DD日");
+        v.deliveryTime = day(v.deliveryTime).format("YYYY-MM-DD HH:mm:ss");
       });
       this.total = total;
       this.orderData = data;

@@ -42,12 +42,6 @@
           </li>
         </ul>
       </div>
-
-      <el-form>
-        <el-form-item>
-          <el-input placeholder="请输入您的都会发生发射点就是考生的分数身份证"></el-input>
-        </el-form-item>
-      </el-form>
     </Panel>
   </div>
 </template>
@@ -56,7 +50,9 @@
 // 引入面板组件
 import Panel from "@/components/Panel/Panel.vue";
 import local from "../../../../../utils/local";
-import moment from "moment";
+// 采用dayjs优化时间函数，相比moment更轻量
+// import moment from "moment";
+let day = require("dayjs");
 import { avatarEdit } from "@/api/account";
 export default {
   data() {
@@ -111,7 +107,7 @@ export default {
   },
   filters: {
     filter(val) {
-      return moment(val).format("YYYY年MM月DD日");
+      return day(val).format("YYYY年MM月DD日");
     }
   }
 };

@@ -23,7 +23,7 @@
           </el-form-item>
           <!-- 用户组项 -->
           <el-form-item label="用户组" prop="userGroup">
-            <el-select v-model="addAccount.userGroup">
+            <el-select v-model="addAccount.userGroup" placeholder="请选择用户管理员权限" style="width:250px">
               <el-option value="超级管理">超级管理员</el-option>
               <el-option value="普通管理">普通管理员</el-option>
             </el-select>

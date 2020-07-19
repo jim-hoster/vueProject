@@ -1,5 +1,5 @@
 <template>
-  <div ref="lineChart" class="lineCharts"></div>
+  <div ref="lineChart" class="lineCharts" :style="{width:setWidth}"></div>
 </template>
 
 <script>
@@ -23,7 +23,7 @@ export default {
     drawLineChart(options) {
       // 初始化echarts,将echart放到这个盒子中，并且保存为变量myChart
       let myChart = echarts.init(this.$refs.lineChart);
-  
+
       //   设置option  配置
       let option = {
         //   主标题
@@ -97,6 +97,11 @@ export default {
       },
       deep: true
     }
+  },
+  computed: {
+    setWidth() {
+      return document.body.clientWidth - 320 + "px";
+    }
   }
 };
 </script>
@@ -106,7 +111,6 @@ export default {
   padding: 20px;
   margin-top: 10px;
   background-color: white;
-  height: 200px;
-  width: 500px;
+  height: 300px;
 }
 </style>
